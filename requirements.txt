@@ -1,0 +1,3 @@
+# Dependensi dasar CCTipi System (fungsi inti hanya memakai Python 3.10+ stdlib + ffmpeg).
+# certifi dipakai untuk bundel root CA TLS terbaru pada scraper & proxy HTTPS:
+certifi==2026.10.23

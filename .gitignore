@@ -1,0 +1,20 @@
+# data runtime & rahasia — jangan pernah di-commit / dibagikan
+# (pola diawali "/" = hanya di folder utama; "data/" tanpa "/" dulu ikut
+#  mengabaikan paket Kotlin android-app/.../data/ sehingga kodenya tidak ter-commit)
+/auth.json
+/sources.json
+/manual_cameras.json
+/data/
+/public/dist/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+/models/*.onnx
+diag_*.txt
+*.keystore
+*.jks
+*.apk
+*.log
+*.tmp
+Clone CCTV Samudera/

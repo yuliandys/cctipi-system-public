@@ -1,0 +1,8 @@
+# Dependensi AI Jepretan & Live AI CCTipi System — pasang ke venv lokal:
+#   python3 -m venv .venv
+#   .venv/bin/pip install -r requirements-ai.txt
+# Seluruh versi dikunci (pinned) agar deterministik:
+onnxruntime==1.32.0
+opencv-python-headless==5.1.0.95
+numpy==2.5.5
+certifi==2026.10.23

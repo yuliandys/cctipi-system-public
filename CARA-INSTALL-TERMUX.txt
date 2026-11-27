@@ -1,0 +1,36 @@
+CCTipi System v1.0.3 — Cara pasang di Termux (Android)
+=======================================================
+
+1. Pasang Termux dan Termux:Boot dari F-Droid (bukan Play Store — versi Play Store sudah usang).
+
+2. Salin zip ini ke HP (mis. folder Download), lalu di Termux:
+     termux-setup-storage            (izinkan akses penyimpanan, sekali saja)
+     cp ~/storage/downloads/cctipi-v1.0.3-termux.zip ~
+     cd ~ && unzip cctipi-v1.0.3-termux.zip
+     cd ~/CCtipi-sistem
+
+   PENTING: jalankan dari ~/CCtipi-sistem (folder Termux), JANGAN dari /sdcard
+   atau ~/storage — di sana data & password bisa dibaca aplikasi lain.
+
+3. Pasang:
+     bash install-termux.sh          → hanya bisa dibuka dari HP ini
+     bash install-termux.sh --lan    → bisa dibuka dari PC/HP lain di Wi-Fi yang sama
+     tambahkan --no-ai bila tidak perlu AI Jepretan (lebih ringan)
+
+4. Buka browser: http://127.0.0.1:9999
+   Login pertama: admin / cctipi123 → langsung ganti di Pengaturan → Akun saya.
+   (Atau salin auth.json dari server lama ke ~/CCtipi-sistem SEBELUM langkah 3
+    agar akun & password lama tetap berlaku.)
+
+Perintah sehari-hari:
+     cctipi status | start | stop | restart | log
+
+Supaya tidak dimatikan Android:
+   - Pengaturan → Aplikasi → Termux → Baterai → Tidak dibatasi
+   - Android 14+: Opsi pengembang → "Disable child process restrictions" → ON
+   - Android 12–13 (lewat ADB/wireless debugging):
+       adb shell settings put global settings_enable_monitor_phantom_procs false
+   - Buka Termux:Boot sekali agar server menyala otomatis setelah HP restart.
+
+Jangan salin dari server lama: .venv, data/sessions.json, __pycache__, berkas APK.
+Untuk akses dari luar kantor, pakai Tailscale — jangan port-forward router.

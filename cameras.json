@@ -1,0 +1,686 @@
+[
+  {
+    "id": 1,
+    "name": "KYAI SALEH",
+    "url": "https://livepantau.semarangkota.go.id/483201e7-cc4b-4c54-848e-b6c4236d5d76/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.986660206981591,
+    "lng": 110.41393529540247
+  },
+  {
+    "id": 2,
+    "name": "THAMRIN PANDANARAN 360",
+    "url": "https://livepantau.semarangkota.go.id/b3834555-da65-436a-82b9-fea8639860cd/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9874484,
+    "lng": 110.417212
+  },
+  {
+    "id": 3,
+    "name": "Ki MANGUN SARKORO",
+    "url": "https://livepantau.semarangkota.go.id/a45ea55c-fa83-4d42-b2f6-a1813d9a063e/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.992885146595283,
+    "lng": 110.42882619962751
+  },
+  {
+    "id": 4,
+    "name": "BANGKONG",
+    "url": "https://livepantau.semarangkota.go.id/2d3f7514-e492-4807-90b9-677320eeabf1/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.994344663219261,
+    "lng": 110.43197296940994
+  },
+  {
+    "id": 5,
+    "name": "MILO",
+    "url": "https://livepantau.semarangkota.go.id/063d85fc-dc5d-4633-8902-f26c21a45721/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9950313677355265,
+    "lng": 110.43384148159886
+  },
+  {
+    "id": 6,
+    "name": "KALIBANTENG",
+    "url": "https://livepantau.semarangkota.go.id/81575009-331d-400b-a622-5f983cce9284/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9845739281732975,
+    "lng": 110.38351440522527
+  },
+  {
+    "id": 7,
+    "name": "KALIBANTENG 2",
+    "url": "https://livepantau.semarangkota.go.id/c7562dd0-92ee-4b9d-b765-3246189afc9e/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9845739281732975,
+    "lng": 110.38351440522527
+  },
+  {
+    "id": 8,
+    "name": "SIMP EXIT TOL KRAPYAK 360",
+    "url": "https://livepantau.semarangkota.go.id/5f03680a-9dac-4ffe-8b28-864d0e1125df/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.987905205244879,
+    "lng": 110.36834198834495
+  },
+  {
+    "id": 9,
+    "name": "SIMPANG KARIADI PTZ",
+    "url": "https://livepantau.semarangkota.go.id/efa565bd-d2ba-4d90-ab83-91ab4d55fe3c/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.994456408986015,
+    "lng": 110.40679725503159
+  },
+  {
+    "id": 10,
+    "name": "KARIADI",
+    "url": "https://livepantau.semarangkota.go.id/3f717052-4a5d-48aa-a28f-376c2dc58098/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.994456408986015,
+    "lng": 110.40679725503159
+  },
+  {
+    "id": 11,
+    "name": "POLDA 360",
+    "url": "https://livepantau.semarangkota.go.id/3761bc39-7dd6-44f9-a682-5a288320e44a/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.99734554026615,
+    "lng": 110.41946265584971
+  },
+  {
+    "id": 12,
+    "name": "SUPRIYADI",
+    "url": "https://livepantau.semarangkota.go.id/547600ed-d185-4b3c-9137-ca6dff60b2c2/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.005675113011601,
+    "lng": 110.45437382622522
+  },
+  {
+    "id": 13,
+    "name": "PETERONGAN",
+    "url": "https://livepantau.semarangkota.go.id/f0191455-ba2e-4eee-a227-f427b45c287d/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.004603253707012,
+    "lng": 110.43217969316407
+  },
+  {
+    "id": 14,
+    "name": "FATMAWATI",
+    "url": "https://livepantau.semarangkota.go.id/b7bec27d-d8de-46d7-b3af-0afa0722fc09/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.0111193118503525,
+    "lng": 110.47278279634085
+  },
+  {
+    "id": 15,
+    "name": "JRAKAH",
+    "url": "https://livepantau.semarangkota.go.id/f9695620-974a-49ed-9d7f-663bee2bfa26/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.98662715622268,
+    "lng": 110.36059956505855
+  },
+  {
+    "id": 16,
+    "name": "GAJAHMADA",
+    "url": "https://livepantau.semarangkota.go.id/9a4f20df-e930-4ee5-b115-3a5280308ddc/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9860048697136055,
+    "lng": 110.4223593333952
+  },
+  {
+    "id": 17,
+    "name": "PASAR KAMBING 360",
+    "url": "https://livepantau.semarangkota.go.id/b3e69a55-680b-405a-9439-b9f622fe901a/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.008614450590608,
+    "lng": 110.43267639966359
+  },
+  {
+    "id": 18,
+    "name": "SP. AKPOL",
+    "url": "https://livepantau.semarangkota.go.id/70d2f548-cc26-4c84-9104-64a20467eaf7/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.015755239902285,
+    "lng": 110.41839208187575
+  },
+  {
+    "id": 19,
+    "name": "HANOMAN",
+    "url": "https://livepantau.semarangkota.go.id/1517cbab-c1ee-429e-8daf-ec7cd6706cfa/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.986628722356102,
+    "lng": 110.37508515409023
+  },
+  {
+    "id": 20,
+    "name": "Tugumuda 3",
+    "url": "https://livepantau.semarangkota.go.id/35a1a82c-24c9-479a-b094-b3861b9b9ab4/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.983552591745231,
+    "lng": 110.41007168405561
+  },
+  {
+    "id": 21,
+    "name": "BALAIKOTA",
+    "url": "https://livepantau.semarangkota.go.id/0ee41464-43fe-484a-9f95-d5cacd333b2b/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.981802885757487,
+    "lng": 110.41203745360802
+  },
+  {
+    "id": 22,
+    "name": "SIMPANG LIMA 1 360",
+    "url": "https://livepantau.semarangkota.go.id/095f58e3-0b19-4074-8d5a-7b505f9e0cd9/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.989453409357332,
+    "lng": 110.42248309240397
+  },
+  {
+    "id": 23,
+    "name": "SIMPANG LIMA 2",
+    "url": "https://livepantau.semarangkota.go.id/64423625-8548-4e61-9e1f-34a933418d35/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.989701906091162,
+    "lng": 110.4239394386692
+  },
+  {
+    "id": 24,
+    "name": "KALIWIRU",
+    "url": "https://livepantau.semarangkota.go.id/b5ba555e-2fd6-433d-aa0c-f37207509fdd/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.0234963601843,
+    "lng": 110.42039310747082
+  },
+  {
+    "id": 25,
+    "name": "PUCANG GADING",
+    "url": "https://livepantau.semarangkota.go.id/18e7a88f-4a6c-48fd-b1bd-f2548cbadb53/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.0180394,
+    "lng": 110.4896678
+  },
+  {
+    "id": 26,
+    "name": "Bea Cukai",
+    "url": "https://livepantau.semarangkota.go.id/a61631b3-610d-44f6-896a-0b3838e5c00b/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.962162914166672,
+    "lng": 110.39435494849369
+  },
+  {
+    "id": 27,
+    "name": "Tugumuda 2 Wide",
+    "url": "https://livepantau.semarangkota.go.id/4e6841ed-7e4a-4715-9a9e-15a015dcd906/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.984085673745568,
+    "lng": 110.40957461560829
+  },
+  {
+    "id": 28,
+    "name": "Tugumuda 3-2",
+    "url": "https://livepantau.semarangkota.go.id/0358babc-ea01-450a-acb5-826ace9010c5/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.984085673745568,
+    "lng": 110.40957461560829
+  },
+  {
+    "id": 29,
+    "name": "INDRAPRASTA-IMAM BONJOL",
+    "url": "https://livepantau.semarangkota.go.id/4aac3b7d-0885-40d0-8d08-00fefc463cad/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.97857137309681,
+    "lng": 110.41163595541559
+  },
+  {
+    "id": 30,
+    "name": "BERGOTA 360",
+    "url": "https://livepantau.semarangkota.go.id/2ca3f24d-fef3-460d-9c18-eb94cf8688d6/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.993292725367926,
+    "lng": 110.4137406704881
+  },
+  {
+    "id": 31,
+    "name": "SIMPANG THAMRIN",
+    "url": "https://livepantau.semarangkota.go.id/27b58a9b-4243-42d2-852a-c7ddd6825b1a/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.985533103185366,
+    "lng": 110.41761658090108
+  },
+  {
+    "id": 32,
+    "name": "BATAN-THAMRIN",
+    "url": "https://livepantau.semarangkota.go.id/208ab31b-437b-46ed-8222-1c6d9c0a8765/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.985533103185366,
+    "lng": 110.41761658090108
+  },
+  {
+    "id": 33,
+    "name": "Exit Tol Srondol",
+    "url": "https://livepantau.semarangkota.go.id/1b091e92-9cae-4047-8bc5-92b491c62a21/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.0610319210434955,
+    "lng": 110.4136417797885
+  },
+  {
+    "id": 34,
+    "name": "Simp Sukun",
+    "url": "https://livepantau.semarangkota.go.id/311aa266-c21b-4810-b37f-883a85d6b7ec/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.062605567256019,
+    "lng": 110.4129704721982
+  },
+  {
+    "id": 35,
+    "name": "BUNDARAN DIPONEGORO",
+    "url": "https://livepantau.semarangkota.go.id/61e8ebe3-538b-4a50-bafe-4eb07f569ebb/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.007793814036264,
+    "lng": 110.41604327781859
+  },
+  {
+    "id": 36,
+    "name": "TUGUMUDA",
+    "url": "https://livepantau.semarangkota.go.id/ac24100e-9700-4af5-ac20-a206fbe57eca/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9843574,
+    "lng": 110.40915
+  },
+  {
+    "id": 37,
+    "name": "KALIGARANG",
+    "url": "https://livepantau.semarangkota.go.id/8282ca24-7bc4-4d97-9108-0403603816c5/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.995766634139341,
+    "lng": 110.40231267560914
+  },
+  {
+    "id": 38,
+    "name": "TLOGOSARI",
+    "url": "https://livepantau.semarangkota.go.id/1e269089-f86b-4c77-b468-93d9212a5698/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9910759,
+    "lng": 110.4579919
+  },
+  {
+    "id": 39,
+    "name": "TITIK NOL",
+    "url": "https://livepantau.semarangkota.go.id/fce20051-5669-41e1-b1f4-1909c6f44a2a/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9688885,
+    "lng": 110.4246946
+  },
+  {
+    "id": 40,
+    "name": "Jembatan Mberok",
+    "url": "https://livepantau.semarangkota.go.id/ef1819cb-06de-4482-8e73-56a59a19c4ed/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.968559914132089,
+    "lng": 110.42504213633904
+  },
+  {
+    "id": 41,
+    "name": "Fly Over Jatingaleh WIde",
+    "url": "https://livepantau.semarangkota.go.id/971f913b-c7c0-472e-b0cc-4e358d052e3a/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.031379565095236,
+    "lng": 110.41811864815716
+  },
+  {
+    "id": 42,
+    "name": "DPU-Kel.Wonosari",
+    "url": "https://livepantau.semarangkota.go.id/4fdcb941-9f14-4a7b-944c-abc7ae32c5cf/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.974747423836861,
+    "lng": 110.31560102777037
+  },
+  {
+    "id": 43,
+    "name": "DPU-Terowongan Soetta USM",
+    "url": "https://livepantau.semarangkota.go.id/5ca3e3c7-c1c4-4fb5-9687-53ddd346eb97/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.979362074903987,
+    "lng": 110.45117518523813
+  },
+  {
+    "id": 44,
+    "name": "DPU_Pahlawan",
+    "url": "https://livepantau.semarangkota.go.id/e3ea2102-dc9f-4085-9b6e-a37d3bfa0e03/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.992240022320623,
+    "lng": 110.42185968058838
+  },
+  {
+    "id": 45,
+    "name": "Fly Over Jatingaleh",
+    "url": "https://livepantau.semarangkota.go.id/6029d95a-d687-403a-b548-e840b2666d36/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.030798827358735,
+    "lng": 110.41818059590902
+  },
+  {
+    "id": 46,
+    "name": "Bukit Sari",
+    "url": "https://livepantau.semarangkota.go.id/f68c51d0-faef-4401-8101-2219e29be81d/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.043874961260227,
+    "lng": 110.42157761119759
+  },
+  {
+    "id": 47,
+    "name": "Patung Diponegoro 360",
+    "url": "https://livepantau.semarangkota.go.id/89cfecce-7f7c-4ee8-8c1a-1ebf7afd642d/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.048618184210592,
+    "lng": 110.41965451794837
+  },
+  {
+    "id": 48,
+    "name": "Pasar Banyumanik",
+    "url": "https://livepantau.semarangkota.go.id/d78053dd-da26-461c-bb2a-f3f4b4812cde/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.073300281863589,
+    "lng": 110.41115190419555
+  },
+  {
+    "id": 49,
+    "name": "COUNTING BANYUMANIK",
+    "url": "https://livepantau.semarangkota.go.id/327fa649-61e9-4e77-815f-4708ccebd9f9/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.074309653496582,
+    "lng": 110.41118334226366
+  },
+  {
+    "id": 50,
+    "name": "Counting Krapyak",
+    "url": "https://livepantau.semarangkota.go.id/a3566012-8c41-4c09-9202-ff756b976d30/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.987779431038806,
+    "lng": 110.36820064210754
+  },
+  {
+    "id": 51,
+    "name": "Bawah Tol X3W_IN",
+    "url": "https://livepantau.semarangkota.go.id/13044713-2965-438b-a3ce-3d922a512c9c/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.956617414460944,
+    "lng": 110.45134081788028
+  },
+  {
+    "id": 52,
+    "name": "Bundaran Madukoro",
+    "url": "https://livepantau.semarangkota.go.id/e7565269-2bdb-4f85-93c9-b4cbbce9c9ec/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.980879592814979,
+    "lng": 110.39905219218345
+  },
+  {
+    "id": 53,
+    "name": "Tugumuda 2",
+    "url": "https://livepantau.semarangkota.go.id/1e17d9a0-17bb-4ac8-af74-5f854ef6399a/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.984831335934285,
+    "lng": 110.41013985942459
+  },
+  {
+    "id": 54,
+    "name": "Camera 01",
+    "url": "https://livepantau.semarangkota.go.id/82e08f8b-7089-4f7d-8139-9aeb14bd3ecc/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.072943100573512,
+    "lng": 110.41118323453831
+  },
+  {
+    "id": 55,
+    "name": "PAHLAWAN PTZ 2",
+    "url": "https://livepantau.semarangkota.go.id/76be2d81-8ab8-4a30-ad1a-8ed8b7e93522/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9945187357073335,
+    "lng": 110.42081059423737
+  },
+  {
+    "id": 56,
+    "name": "PAHLAWAN 180",
+    "url": "https://livepantau.semarangkota.go.id/ef293a8f-236a-48bd-8c9c-9a3bfc36250d/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9945187357073335,
+    "lng": 110.42081059423737
+  },
+  {
+    "id": 57,
+    "name": "PAHLAWAN - RIMBA GRAHA",
+    "url": "https://livepantau.semarangkota.go.id/7c7320f7-df29-4cbd-8c60-9bc72ed76c42/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.995875641261524,
+    "lng": 110.41988482785995
+  },
+  {
+    "id": 58,
+    "name": "PAHLAWAN - BUNDARAN AIR MANCUR",
+    "url": "https://livepantau.semarangkota.go.id/4e95160d-aee2-496c-85d7-1f90226bc418/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.992932591996135,
+    "lng": 110.42144602839531
+  },
+  {
+    "id": 59,
+    "name": "ARAH TUGU TUNAS",
+    "url": "https://livepantau.semarangkota.go.id/bbb2824a-c686-45d2-b519-4dbc0f63f342/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9928050474372645,
+    "lng": 110.42072595566216
+  },
+  {
+    "id": 60,
+    "name": "PEMUDA - GAJAHMADA",
+    "url": "https://livepantau.semarangkota.go.id/58fc6d7b-c3ba-4c48-8c43-6a23f2b84d38/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.973747366261158,
+    "lng": 110.41997868344541
+  },
+  {
+    "id": 61,
+    "name": "MT Haryono",
+    "url": "https://livepantau.semarangkota.go.id/44dc9d85-a90a-40c2-97fc-2a6984db7c77/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9856571373555285,
+    "lng": 110.43158898843247
+  },
+  {
+    "id": 62,
+    "name": "SRIWIJAYA 02",
+    "url": "https://livepantau.semarangkota.go.id/b2bc8a02-207a-4ce3-86a4-e2484d789ddf/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.001459211428023,
+    "lng": 110.42441362970271
+  },
+  {
+    "id": 63,
+    "name": "SRIWIJAYA 01",
+    "url": "https://livepantau.semarangkota.go.id/c33b159d-f0e8-4a83-9448-75283b5ae0d6/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.001459211428023,
+    "lng": 110.42441362970271
+  },
+  {
+    "id": 64,
+    "name": "SIMPANG TENTREM MALL",
+    "url": "https://livepantau.semarangkota.go.id/294213b0-e432-4d27-9207-9f28f22805ae/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.986070372503007,
+    "lng": 110.42239339565648
+  },
+  {
+    "id": 65,
+    "name": "ARAH PANDANARAN",
+    "url": "https://livepantau.semarangkota.go.id/e7e28c0e-4714-4eb1-8cd2-c2ed58c786d9/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9915460998662855,
+    "lng": 110.42001900715552
+  },
+  {
+    "id": 66,
+    "name": "METRO JOHAR",
+    "url": "https://livepantau.semarangkota.go.id/89ff7f4f-6e10-4882-8194-23598e14b687/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.971095117010179,
+    "lng": 110.42277318994154
+  },
+  {
+    "id": 67,
+    "name": "Counting Exit Srondol",
+    "url": "https://livepantau.semarangkota.go.id/1e1b3ec9-b2ad-493b-b3cf-a909be24136a/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -7.060907545084942,
+    "lng": 110.41384472546832
+  },
+  {
+    "id": 68,
+    "name": "Counting KIW",
+    "url": "https://livepantau.semarangkota.go.id/e588a86d-feac-4b51-a055-bfd1232a5777/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.980712583389211,
+    "lng": 110.33444443806523
+  },
+  {
+    "id": 69,
+    "name": "Sam Poo Kong ke timur",
+    "url": "https://livepantau.semarangkota.go.id/16c1704e-d68c-49d4-bd63-13c1f4f913cc/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9948348624975925,
+    "lng": 110.39924880659301
+  },
+  {
+    "id": 70,
+    "name": "Simpang Paragon",
+    "url": "https://livepantau.semarangkota.go.id/83542b6e-77bc-4841-b2b8-4d5dd0f43a40/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.977594829865367,
+    "lng": 110.41648579644745
+  },
+  {
+    "id": 71,
+    "name": "Gajah ke barat",
+    "url": "https://livepantau.semarangkota.go.id/ece2a553-ffc2-445b-b7bb-3c4538e01762/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9998110477197955,
+    "lng": 110.44499082654086
+  },
+  {
+    "id": 72,
+    "name": "RUAS KERAPYAK",
+    "url": "https://livepantau.semarangkota.go.id/ce8d7f18-4b92-4069-8168-7d43451f502a/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.987600326282743,
+    "lng": 110.36876663570018
+  },
+  {
+    "id": 73,
+    "name": "Karangayu ke timur",
+    "url": "https://livepantau.semarangkota.go.id/abeacd51-d032-4bd3-93ee-21bb90dd4f49/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.982547251583242,
+    "lng": 110.39172256228
+  },
+  {
+    "id": 74,
+    "name": "Karangayu ke barat",
+    "url": "https://livepantau.semarangkota.go.id/2b63391e-7a02-42ce-b75a-5617fc32f068/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.982547251583242,
+    "lng": 110.39172256228
+  },
+  {
+    "id": 75,
+    "name": "Sam Poo Kong ke barat",
+    "url": "https://livepantau.semarangkota.go.id/d2ffdf3d-b421-40c6-9916-8da919ecfdee/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.994830867612991,
+    "lng": 110.39940912943106
+  },
+  {
+    "id": 76,
+    "name": "JPO JALAN AHMAD YANI",
+    "url": "https://livepantau.semarangkota.go.id/b9dca978-da64-4178-b1f8-e8d85b81da0c/index.m3u8",
+    "provider": "semarang",
+    "folder": "Semarang",
+    "lat": -6.9909267384127345,
+    "lng": 110.42445237707864
+  }
+]

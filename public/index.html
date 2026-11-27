@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#eef3f8">
+  <title>CCTipi System — CCTV Multiview + AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/css/pantau.css">
+  <link rel="stylesheet" href="/css/pages.css">
+  <!-- versi dikunci + Subresource Integrity -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.7.4/dist/hls.min.js" integrity="sha384-p9vgU/7IYJWd3I4STrtqxqR/2cAQlhIX7D/HrTnIMEjjcUox165b7se7sxmm3zDg" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flv.js@1.5.0/dist/flv.min.js" integrity="sha384-LQ4iUfR5iWRvSEKpfA333wz5p7iO8T+cofeGI2F+2vrvWIMCyrbccYoBTpzoy/fJ" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true">
+    <defs>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-video" viewBox="0 0 24 24"><path d="m16 13 5.2 3.5a.5.5 0 0 0 .8-.4V7.9a.5.5 0 0 0-.8-.4L16 11"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+      <symbol id="i-repeat" viewBox="0 0 24 24"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M9.9 9.9a3 3 0 1 0 4.2 4.2"/><path d="M10.7 5.1A10.4 10.4 0 0 1 12 5c7 0 10 7 10 7a13 13 0 0 1-1.7 2.7"/><path d="M6.6 6.6A13.5 13.5 0 0 0 2 12s3 7 10 7a9.7 9.7 0 0 0 5.4-1.6"/><path d="m2 2 20 20"/></symbol>
+      <symbol id="i-rotate" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.9 1 6.7 2.7L21 8"/><path d="M21 3v5h-5"/></symbol>
+      <symbol id="i-map" viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20Z"/><path d="M9 4v13.5M15 6.5V20"/></symbol>
+      <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+      <symbol id="i-activity" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+      <symbol id="i-film" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 3v18M17 3v18M3 12h18M3 7.5h4M3 16.5h4M17 7.5h4M17 16.5h4"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+      <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></symbol>
+      <symbol id="i-chev-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+      <symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+      <symbol id="i-chev-up" viewBox="0 0 24 24"><path d="m18 15-6-6-6 6"/></symbol>
+      <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.2"/><circle cx="12" cy="12" r="1.2"/><circle cx="19" cy="12" r="1.2"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+      <symbol id="i-folder" viewBox="0 0 24 24"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.7-.9l-.8-1.2A2 2 0 0 0 7.9 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+      <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2Z"/></symbol>
+      <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4v16l13-8Z"/></symbol>
+      <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M17 3a2.8 2.8 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3Z"/><circle cx="12" cy="13" r="3"/></symbol>
+      <symbol id="i-maximize" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></symbol>
+      <symbol id="i-rec" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="currentColor" stroke="none"/></symbol>
+      <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6.5" y="6.5" width="11" height="11" rx="1.5" fill="currentColor" stroke="none"/></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+      <symbol id="i-alert" viewBox="0 0 24 24"><path d="m21.7 18-8-14a2 2 0 0 0-3.5 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.7-3Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+      <symbol id="i-upload" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+      <symbol id="i-save" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2Z"/><path d="M17 21v-8H7v8M7 3v5h8"/></symbol>
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+      <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><circle cx="12" cy="12" r="3"/></symbol>
+      <symbol id="i-loader" viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-6.2-8.6"/></symbol>
+      <symbol id="i-gauge" viewBox="0 0 24 24"><path d="m12 14 4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="logo-mark" viewBox="0 0 96 96">
+  <defs>
+    <linearGradient id="scr-s" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f8a6b"/>
+      <stop offset="1" stop-color="#0d4d63"/>
+    </linearGradient>
+    <radialGradient id="lens-s" cx="0.38" cy="0.34" r="0.75">
+      <stop offset="0" stop-color="#1d5a7a"/>
+      <stop offset="0.55" stop-color="#0a2236"/>
+      <stop offset="1" stop-color="#06121e"/>
+    </radialGradient>
+  </defs>
+  <g fill="none" stroke="#0b2a45" stroke-width="5" stroke-linecap="round">
+    <path d="M48 23 L33 9"/>
+    <path d="M48 23 L62 7"/>
+  </g>
+  <circle cx="33" cy="9" r="4" fill="#0b2a45"/>
+  <circle cx="62" cy="7" r="4" fill="#5ff0b8"/>
+  <rect x="7" y="21" width="82" height="64" rx="21" fill="#0b2a45"/>
+  <rect x="25" y="84" width="10" height="7" rx="3" fill="#0b2a45"/>
+  <rect x="61" y="84" width="10" height="7" rx="3" fill="#0b2a45"/>
+  <rect x="15" y="29" width="66" height="48" rx="14" fill="url(#scr-s)"/>
+  <circle cx="48" cy="53" r="18" fill="#ffffff" fill-opacity="0.14"/>
+  <circle cx="48" cy="53" r="15" fill="url(#lens-s)" stroke="#ffffff" stroke-width="3.2"/>
+  <circle cx="48" cy="53" r="6.5" fill="#0f3550"/>
+  <circle cx="43.5" cy="48.5" r="3" fill="#ffffff" fill-opacity="0.9"/>
+  <circle cx="71" cy="38" r="4.6" fill="#5ff0b8"/>
+  <circle cx="71" cy="38" r="4.6" fill="none" stroke="#0b2a45" stroke-opacity="0.35" stroke-width="1.5"/>
+      </symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></symbol>
+      <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3.5 6h.01M3.5 12h.01M3.5 18h.01"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-3.5 8-10V5l-8-3-8 3v7c0 6.5 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></symbol>
+      <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+      <symbol id="i-radio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 0 1 0 8.4M7.8 16.2a6 6 0 0 1 0-8.4M19 5a10 10 0 0 1 0 14M5 19A10 10 0 0 1 5 5"/></symbol>
+    </defs>
+
+    <defs>
+      <symbol id="i-ai" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 9h6v6H9zM9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></symbol>
+      <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+      <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></symbol>
+      <symbol id="i-swap" viewBox="0 0 24 24"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+      <symbol id="i-hdd" viewBox="0 0 24 24"><path d="M22 12H2M5.5 5.1 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.5-6.9A2 2 0 0 0 16.8 4H7.2a2 2 0 0 0-1.7 1.1Z"/><path d="M6 16h.01M10 16h.01"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
+      <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9Z"/></symbol>
+    </defs>
+  </svg>
+
+  <div class="app-shell">
+    <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+    <aside id="sidebar" class="sidebar" aria-label="Daftar kamera">
+      <div class="sidebar-brand">
+        <button type="button" class="brand brand-home" data-go="home" title="Kembali ke Beranda">
+          <svg class="brand-logo" aria-hidden="true"><use href="#logo-mark"/></svg>
+          <span class="wordmark">CCTipi<span class="wordmark-dot"></span></span>
+        </button>
+        <button type="button" class="icon-btn drawer-close" data-close-drawer aria-label="Tutup daftar kamera"><svg class="ic"><use href="#i-x"/></svg></button>
+      </div>
+
+      <div class="sidebar-header">
+        <div class="search-box">
+          <svg class="ic"><use href="#i-search"/></svg>
+          <input type="search" id="search-input" placeholder="Cari lokasi CCTV…" autocomplete="off">
+        </div>
+        <div class="filter-pills" id="filter-pills" role="group" aria-label="Filter daerah"></div>
+        <div class="preset-bar">
+          <select id="preset-select" aria-label="Preset tampilan"></select>
+          <button id="new-folder-btn" class="mini-accent-btn" title="Buat folder custom baru">
+            <svg class="ic"><use href="#i-plus"/></svg>Folder
+          </button>
+        </div>
+      </div>
+
+      <div id="camera-list" class="camera-list"></div>
+
+      <div class="sidebar-footer">
+        <button id="refresh-api-btn" class="secondary-btn">
+          <svg class="ic"><use href="#i-rotate"/></svg>Sync live semua daerah
+        </button>
+        <span id="api-source-badge" class="api-badge">Memuat…</span>
+        <div class="user-chip"><span class="avatar" id="user-initial">?</span><span class="user-name" id="user-name">Memuat…</span><span class="user-role" id="user-role">…</span></div>
+      </div>
+    </aside>
+
+    <div class="main-col">
+      <header class="topbar">
+        <div class="topbar-row">
+          <div class="topbar-left">
+            <button id="toggle-sidebar-btn" class="icon-btn" title="Daftar kamera" aria-label="Tampilkan / sembunyikan daftar kamera">
+              <svg class="ic"><use href="#i-menu"/></svg>
+            </button>
+            <button type="button" class="brand brand-compact" data-go="home" title="Beranda">
+              <svg class="brand-logo" aria-hidden="true"><use href="#logo-mark"/></svg>
+              <span class="wordmark">CCTipi<span class="wordmark-dot"></span></span>
+            </button>
+            <div class="page-heading">
+              <span class="eyebrow"><span id="greeting">Selamat datang</span> · <span id="clock" class="clock">--:--:--</span></span>
+              <h1 id="page-title">Beranda</h1>
+              <div class="heading-meta">
+                <p class="subtitle" id="page-sub"><span id="camera-count">416</span> kamera · <span id="folder-count">9</span> daerah</p>
+                <button type="button" id="controls-toggle" class="controls-toggle" aria-expanded="false" aria-controls="control-wrap" title="Atur layout, kualitas, dan halaman">
+                  <svg class="ic"><use href="#i-sliders"/></svg>
+                  <span id="controls-summary">Atur tampilan</span>
+                  <svg class="ic chev"><use href="#i-chev-down"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="topbar-right">
+            <div class="quick-cluster" aria-label="Aksi cepat">
+              <button type="button" class="cluster-btn" data-proxy="toggle-map-btn" title="Peta"><svg class="ic"><use href="#i-map"/></svg></button>
+              <button type="button" class="cluster-btn" data-proxy="open-recordings-btn" title="Rekaman"><svg class="ic"><use href="#i-history"/></svg><span class="cluster-badge" data-mirror="recordings-count"></span></button>
+              <button type="button" class="cluster-btn" data-proxy="open-health-btn" title="Health monitor"><svg class="ic"><use href="#i-activity"/></svg></button>
+            </div>
+
+            <div id="toolbar-actions" class="toolbar-actions" role="menu">
+              <span class="sheet-handle" aria-hidden="true"></span>
+              <p class="sheet-title">Menu lainnya</p>
+              <div class="toolbar-group">
+                <button id="auto-cycle-btn" class="action-btn" title="Putar halaman otomatis setiap 20 detik"><svg class="ic"><use href="#i-repeat"/></svg><span class="lbl">Auto-Cycle</span></button>
+                <button id="toggle-hide-offline-btn" class="action-btn" title="Sembunyikan CCTV offline dari multiview"><svg class="ic"><use href="#i-eye-off"/></svg><span class="lbl">Hide Offline</span></button>
+                <button id="reload-all-btn" class="action-btn" title="Muat ulang semua stream aktif"><svg class="ic"><use href="#i-rotate"/></svg><span class="lbl">Muat Ulang</span></button>
+              </div>
+              <div class="toolbar-group">
+                <button id="toggle-map-btn" class="action-btn" data-page-btn="peta" title="Peta interaktif"><svg class="ic"><use href="#i-map"/></svg><span class="lbl">Peta</span></button>
+                <button id="tv-wall-btn" class="action-btn" title="Mode TV Wall / Kiosk fullscreen"><svg class="ic"><use href="#i-tv"/></svg><span class="lbl">TV Wall</span></button>
+                <button id="open-health-btn" class="action-btn" data-page-btn="health" title="Health monitor CCTV"><svg class="ic"><use href="#i-activity"/></svg><span class="lbl">Health</span></button>
+                <button id="open-recordings-btn" class="action-btn" data-page-btn="rekaman" title="Rekaman server &amp; browser"><svg class="ic"><use href="#i-history"/></svg><span class="lbl">Rekaman</span><span id="recordings-count" class="count-badge">0</span></button>
+              </div>
+              <div class="toolbar-group group-ai">
+                <button id="open-jepretan-btn" class="action-btn" data-page-btn="jepretan" title="Jepretan AI — deteksi objek"><svg class="ic"><use href="#i-scan"/></svg><span class="lbl">Jepretan AI</span><span id="jepretan-count" class="count-badge">0</span></button>
+                <button id="ai-quick-btn" data-perm="settings.ai" class="action-btn ai-quick" title="Status worker AI — klik untuk mulai / berhenti"><svg class="ic"><use href="#i-ai"/></svg><span class="lbl" id="ai-quick-lbl">AI mati</span></button>
+              </div>
+              <div class="toolbar-group">
+                <button id="open-manual-cam-btn" class="action-btn" data-page-btn="kamera" title="Kamera Saya — tambah &amp; kelola kamera manual"><svg class="ic"><use href="#i-video"/></svg><span class="lbl">Kamera Saya</span></button>
+                <button id="open-settings-btn" class="action-btn" data-page-btn="pengaturan" title="Pengaturan, AI, rekaman server, sumber stream"><svg class="ic"><use href="#i-sliders"/></svg><span class="lbl">Pengaturan</span></button>
+                <button id="logout-btn" class="action-btn danger-btn" title="Keluar dari akun"><svg class="ic"><use href="#i-logout"/></svg><span class="lbl">Keluar</span></button>
+              </div>
+            </div>
+            <button id="more-btn" class="icon-btn more-btn" title="Menu lainnya" aria-label="Menu lainnya" aria-expanded="false" aria-controls="toolbar-actions">
+              <svg class="ic"><use href="#i-more"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="control-wrap" class="control-wrap">
+        <div class="control-inner">
+        <div class="topbar-center control-bar">
+          <div class="segmented" role="group" aria-label="Layout grid" id="layout-presets">
+            <button class="layout-btn" data-cols="1" data-rows="1" title="1×1">1×1</button>
+            <button class="layout-btn active" data-cols="2" data-rows="2" title="2×2">2×2</button>
+            <button class="layout-btn" data-cols="3" data-rows="2" title="3×2">3×2</button>
+            <button class="layout-btn" data-cols="3" data-rows="3" title="3×3">3×3</button>
+            <button class="layout-btn" data-cols="4" data-rows="3" title="4×3">4×3</button>
+            <button class="layout-btn" data-cols="4" data-rows="4" title="4×4">4×4</button>
+            <button class="layout-btn" data-cols="5" data-rows="4" title="5×4">5×4</button>
+          </div>
+
+          <div class="segmented custom-grid-group" title="Ukuran grid kustom (kolom × baris)">
+            <svg class="ic ic-muted"><use href="#i-grid"/></svg>
+            <input type="number" id="custom-cols" min="1" max="8" value="2" aria-label="Jumlah kolom">
+            <span class="custom-grid-sep">×</span>
+            <input type="number" id="custom-rows" min="1" max="8" value="2" aria-label="Jumlah baris">
+            <button id="apply-custom-grid-btn" class="layout-btn" title="Terapkan grid kustom">Set</button>
+          </div>
+
+          <div class="segmented view-style-group" role="group" aria-label="Gaya tampilan multiview">
+            <button type="button" class="layout-btn view-btn" data-view="card" title="Gaya Kartu"><svg class="ic"><use href="#i-grid"/></svg><span>Kartu</span></button>
+            <button type="button" class="layout-btn view-btn" data-view="wall" title="Gaya Wall"><svg class="ic"><use href="#i-tv"/></svg><span>Wall</span></button>
+          </div>
+
+          <label class="segmented quality-group" title="Kualitas stream untuk semua kamera">
+            <svg class="ic ic-muted"><use href="#i-gauge"/></svg>
+            <span class="quality-label">Kualitas</span>
+            <select id="quality-select" aria-label="Kualitas stream semua kamera">
+              <option value="auto">Auto</option>
+            </select>
+          </label>
+
+          <div class="segmented pagination-group">
+            <button id="prev-page-btn" class="icon-btn" title="Halaman sebelumnya" aria-label="Halaman sebelumnya"><svg class="ic"><use href="#i-chev-left"/></svg></button>
+            <span id="page-indicator" class="page-indicator">Hal 1/1</span>
+            <button id="next-page-btn" class="icon-btn" title="Halaman berikutnya" aria-label="Halaman berikutnya"><svg class="ic"><use href="#i-chev-right"/></svg></button>
+          </div>
+        </div>
+
+        <!-- Baris 2: tata letak kustom + preset bernama -->
+        <div class="control-bar layout-bar">
+          <button type="button" id="edit-layout-btn" class="layout-btn edit-toggle" title="Atur tata letak: ganti, kosongkan, tukar slot">
+            <svg class="ic"><use href="#i-layout"/></svg><span>Atur tata letak</span>
+          </button>
+          <label class="segmented fill-group" title="Isi grid dari folder / daerah">
+            <svg class="ic ic-muted"><use href="#i-folder"/></svg>
+            <select id="fill-select" aria-label="Isi grid dari"></select>
+            <button type="button" id="fill-btn" class="layout-btn">Isi grid</button>
+          </label>
+          <div class="segmented layout-preset-group" title="Preset tata letak bernama">
+            <svg class="ic ic-muted"><use href="#i-bookmark"/></svg>
+            <select id="lp-select" aria-label="Preset tata letak"></select>
+            <button type="button" class="layout-btn" id="lp-apply">Terapkan</button>
+            <button type="button" class="layout-btn" id="lp-save" title="Simpan tata letak sekarang sebagai preset baru">Simpan</button>
+            <button type="button" class="layout-btn" id="lp-overwrite" title="Timpa preset terpilih">Timpa</button>
+            <button type="button" class="layout-btn lp-del" id="lp-delete" title="Hapus preset terpilih">Hapus</button>
+            <button type="button" class="layout-btn" id="lp-reset" title="Atur ulang tata letak">Atur ulang</button>
+          </div>
+        </div>
+        </div>
+        </div>
+      </header>
+
+      <main class="main-area">
+        <div id="default-pass-banner" class="api-alert-banner pass-banner hidden" role="status">
+          <span class="banner-icon"><svg class="ic"><use href="#i-lock"/></svg></span>
+          <span class="api-alert-text"><b>Password perlu diganti.</b> Akun ini masih memakai password bawaan atau password awal dari admin — ganti di Pengaturan → Akun saya.</span>
+          <div class="api-alert-actions">
+            <button class="mini-accent-btn" data-goto="pengaturan" data-tab="akun">Ganti sekarang</button>
+            <button class="icon-btn" data-dismiss="default-pass-banner" aria-label="Tutup"><svg class="ic"><use href="#i-x"/></svg></button>
+          </div>
+        </div>
+
+        <div id="api-alert-banner" class="api-alert-banner hidden" role="status">
+          <span class="banner-icon"><svg class="ic"><use href="#i-alert"/></svg></span>
+          <span id="api-alert-text" class="api-alert-text">Beberapa API daerah sedang offline.</span>
+          <div class="api-alert-actions">
+            <button id="api-alert-retry-btn" class="mini-accent-btn">Cek ulang</button>
+            <button class="icon-btn" data-dismiss="api-alert-banner" aria-label="Tutup notifikasi"><svg class="ic"><use href="#i-x"/></svg></button>
+          </div>
+        </div>
+
+        <div id="edit-help" class="edit-help hidden">
+          <svg class="ic"><use href="#i-layout"/></svg>
+          <span><b>Mode Atur aktif.</b> Klik satu tile lalu tile lain untuk menukar, atau seret &amp; letakkan. <b>Ganti</b> memilih kamera, <b>Kosongkan</b> mengosongkan slot.</span>
+          <button class="mini-accent-btn" id="edit-done-btn">Selesai</button>
+        </div>
+
+        <div id="cctv-grid" class="cctv-grid"></div>
+        <div id="map-view" class="map-view demo-map hidden"><div id="leaflet-map" class="leaflet-host"></div><div class="map-legend" id="map-legend"></div></div>
+        <div id="page-view" class="page-view hidden"></div>
+
+        <div id="tv-wall-hud" class="tv-wall-hud hidden">
+          <span class="live-dot"></span>
+          <span id="tv-wall-clock">00:00:00</span>
+          <button id="exit-tv-wall-btn" class="action-btn"><svg class="ic"><use href="#i-x"/></svg><span>Keluar TV Wall</span></button>
+        </div>
+
+        <footer class="notice-bar">
+          Sumber stream: SAMUDRA Jepara · Diskominfo Kudus · Dishub Demak · Jombang Smart Service · Bina Marga Tol · Pemkot Jogja · Pantau Semar · Pati · Rembang
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <nav id="bottom-nav" class="bottom-nav" data-active="beranda" aria-label="Navigasi utama">
+    <span class="nav-indicator" aria-hidden="true"></span>
+    <button type="button" class="nav-item" data-nav="beranda"><svg class="ic"><use href="#i-home"/></svg><span>Beranda</span></button>
+    <button type="button" class="nav-item" data-nav="pantau"><svg class="ic"><use href="#i-grid"/></svg><span>Pantau</span></button>
+    <button type="button" class="nav-item" data-nav="daftar"><svg class="ic"><use href="#i-list"/></svg><span>Daftar</span></button>
+    <button type="button" class="nav-item" data-nav="jepretan"><svg class="ic"><use href="#i-scan"/></svg><span>Jepretan</span><span class="nav-dot" id="nav-jp-dot"></span></button>
+    <button type="button" class="nav-item" data-nav="lainnya"><svg class="ic"><use href="#i-more"/></svg><span>Lainnya</span></button>
+  </nav>
+  <div id="sheet-backdrop" class="sheet-backdrop"></div>
+
+  <!-- Modal generik (dipakai: folder custom, pemilih slot, detail jepretan, putar rekaman, konfirmasi) -->
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-dialog" id="modal-dialog"></div>
+  </div>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <script src="/js/core.js"></script>
+  <script src="/js/pantau.js"></script>
+  <script src="/js/rekaman.js"></script>
+  <script src="/js/jepretan.js"></script>
+  <script src="/js/pengaturan.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

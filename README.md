@@ -1,4 +1,4 @@
-# CCTipi System v1.0 — Multiview CCTV + AI + Cloud
+# CCTipi System — Multiview CCTV + AI + Cloud
 
 Aplikasi pemantauan CCTV lokal berbasis web dengan multiview, AI Jepretan (YOLO11n), Live AI realtime, Rekaman Server, Perjelas Malam, notifikasi Telegram, ONVIF/RTSP, Tuya IoT Cloud, dan pengamanan sesi/RBAC.
 
